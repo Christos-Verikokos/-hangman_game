@@ -5,9 +5,9 @@ from pathlib import Path
 import json
 
 # Read and load files that contains hangman paints and list of available words
-path_ascii = Path('/Users/macbook/Documents/python projects/pcc doc/code_pieces/hangman/hangman_ascii.json')
+path_ascii = Path('hangman_ascii.json')
 list_ascii_hang = json.loads(path_ascii.read_text())
-path_words = Path('/Users/macbook/Documents/python projects/pcc doc/code_pieces/hangman/words_list')
+path_words = Path('words_list')
 contents_words = path_words.read_text().split()
 
 # Define a function that it print corresponding life level
