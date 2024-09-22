@@ -16,14 +16,14 @@ def hangman_paint(stage):
     for line in temp:
             print(line)
 
-lives = 6
+lifes = 6
 available_letters = list(string.ascii_lowercase)
 word = random.choice(contents_words)
 placeholder = list(word.replace(word, '_' * len(word)))
 
 # Main 
-while '_' in placeholder and lives != 0:   
-    hangman_paint(lives)
+while '_' in placeholder and lifes != 0:   
+    hangman_paint(lifes)
     print(f"\n({' '.join(placeholder)})")
     print(f"Available letters: {' '.join(available_letters).upper()}")
     
@@ -43,11 +43,11 @@ while '_' in placeholder and lives != 0:
                 placeholder[count] = letter    
             count += 1
     else:
-        lives -= 1
+        lifes -= 1
 
 #Final check condition.
-if lives == 0:
-    hangman_paint(lives)
+if lifes == 0:
+    hangman_paint(lifes)
     print("GAME OVER!")
 elif '_' not in placeholder:
     print(f"YOU WIN!\nThe word is: {word.upper()}")
